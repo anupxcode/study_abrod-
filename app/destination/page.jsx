@@ -128,9 +128,16 @@ export default function DestinationsPage() {
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                     className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                   >
-                    <div className="relative flex h-32 items-center justify-center bg-gradient-to-br from-primary to-primary/70">
-                      <span className="text-6xl transition group-hover:scale-110" aria-hidden="true">
-                        {d.flag}
+                    <div className="relative h-40 overflow-hidden bg-secondary">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={d.image}
+                        alt={`${d.name} campus and city`}
+                        loading="lazy"
+                        className="size-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute left-3 top-3 rounded-full bg-background/95 px-2.5 py-1 text-sm font-medium shadow-sm">
+                        <span aria-hidden="true">{d.flag}</span> {d.code}
                       </span>
                       <span className="absolute right-3 top-3 rounded-full bg-accent px-2.5 py-0.5 text-xs font-medium text-accent-foreground">
                         Popular: {d.popular}
@@ -140,6 +147,7 @@ export default function DestinationsPage() {
                     <div className="flex flex-1 flex-col p-5">
                       <h2 className="font-heading text-xl font-semibold">{d.name}</h2>
                       <p className="mt-1 text-sm text-muted-foreground">{d.tagline}</p>
+                      <p className="mt-2 text-sm font-medium text-primary">{d.scholarship}</p>
 
                       <dl className="mt-4 space-y-2 text-sm">
                         <div className="flex items-start gap-2">
