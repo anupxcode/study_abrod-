@@ -14,8 +14,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 // Adjust these two imports to match your Home page's components
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { destinations, levels, subjects } from "@/lib/mock-data";
 
 const ALL = "all";
